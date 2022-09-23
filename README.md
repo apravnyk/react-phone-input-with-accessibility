@@ -1,6 +1,8 @@
 # React-Phone-Input With Accessibility
 Highly customizable phone input component with auto formatting.
 
+![animation](https://media.giphy.com/media/xiORAWnqoTJDsH0UOI/giphy.gif)
+
 ## Installation
 ```shell-script
 npm install react-phone-input-with-accessibility
