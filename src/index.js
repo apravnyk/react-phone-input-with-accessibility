@@ -270,7 +270,6 @@ class PhoneInput extends React.Component {
   guessSelectedCountry = memoize((inputNumber, country, onlyCountries, hiddenAreaCodes) => {
     // if enableAreaCodes == false, try to search in hidden area codes to detect area code correctly
     // then search and insert main country which has this area code
-    // https://github.com/bl00mber/react-phone-input-2/issues/201
     if (this.props.enableAreaCodes === false) {
       let mainCode;
       hiddenAreaCodes.some(country => {
