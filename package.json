@@ -1,6 +1,6 @@
 {
-  "name": "@apravnyk/react-phone-input-with-accessibility",
-  "version": "1.0.0",
+  "name": "react-phone-input-with-accessibility",
+  "version": "1.0.1",
   "description": "A react component to format phone numbers",
   "main": "lib/lib.js",
   "typings": "index.d.ts",
@@ -8,7 +8,7 @@
     "test": "jest",
     "start": "TARGET=dev_js NODE_ENV=development webpack-dev-server --progress",
     "start:css": "TARGET=dev_css NODE_ENV=development webpack-dev-server --progress",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && npm run build:js && npm run build:css",
+    "build": "export && npm run build:js && npm run build:css",
     "build:js": "TARGET=build_js NODE_ENV=production webpack -p --progress",
     "build:css": "TARGET=build_css NODE_ENV=production webpack -p --progress && rm ./main.js",
     "prepublishOnly": "npm run build",
@@ -40,12 +40,6 @@
   "author": "Andrii Pravnyk <pravnyka@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/apravnyk/react-phone-input-with-accessibility",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "repository": {
-    "url": "https://github.com/apravnyk/react-phone-input-with-accessibility"
-  },
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/test/__mocks__/fileMock.js",
@@ -57,7 +51,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "babel-loader": "^8.0.5",
     "babel-preset-react-app": "^7.0.1",
     "css-loader": "^2.1.0",

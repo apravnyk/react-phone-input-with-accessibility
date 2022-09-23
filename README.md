@@ -3,7 +3,11 @@ Highly customizable phone input component with auto formatting.
 
 ## Installation
 ```shell-script
-npm install react-phone-input-with-accessibility --save
+npm install react-phone-input-with-accessibility
+```
+
+```shell-script
+yarn add react-phone-input-with-accessibility
 ```
 
 ## Usage
