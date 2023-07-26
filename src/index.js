@@ -100,6 +100,7 @@ class PhoneInput extends React.Component {
     ]),
     defaultErrorMessage: PropTypes.string,
     specialLabel: PropTypes.string,
+    id: PropTypes.string,
   }
 
   static defaultProps = {
@@ -172,7 +173,8 @@ class PhoneInput extends React.Component {
     keys: {
       UP: 38, DOWN: 40, RIGHT: 39, LEFT: 37, ENTER: 13,
       ESC: 27, PLUS: 43, A: 65, Z: 90, SPACE: 32, TAB: 9,
-    }
+    },
+    id: '',
   }
 
   constructor(props) {
@@ -975,7 +977,7 @@ class PhoneInput extends React.Component {
                   role='combobox'
                   aria-haspopup="listbox"
                   aria-expanded={!!showDropdown}
-                  aria-labelledby="countryCodeLabel"
+                  aria-labelledby={`countryCodeLabel-${id}`}
               >
                 <div className={inputFlagClasses}>
                   {!disableDropdown && <div className={arrowClasses}></div>}
