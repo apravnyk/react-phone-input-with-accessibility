@@ -1,35 +1,30 @@
-# react-phone-input-with-accessibility
+# React-Phone-Input With Accessibility
+ ## react-phone-input-with-accessibility
 A React component for phone number input with built-in accessibility support.
+
 ![animation](https://media.giphy.com/media/xiORAWnqoTJDsH0UOI/giphy.gif)
 
 ## Installation
-
-You can install the package via npm or yarn:
+```shell-script
+npm install react-phone-input-with-accessibility
+```
 
 ```shell-script
-npm install react-phone-input-with-accessibility --save
-
-or
-
-shell-script
 yarn add react-phone-input-with-accessibility
+```
 
 ## Usage
-Here's a simple example of how to use the component in your project:
+```jsx
+import PhoneInput from 'react-phone-input-with-accessibility'
+import 'react-phone-input-with-accessibility/lib/style.css'
 
-jsx
-import ReactPhoneInput from 'react-phone-input-with-accessibility';
-import 'react-phone-input-with-accessibility/dist/style.css'; // Import styles (if needed)
-
-function MyComponent() {
-    return (
-        <ReactPhoneInput
-            defaultCountry="us"
-            onChange={(value, country) => console.log(value, country)}
-        />
-    );
-}
-available styles - style • high-res • material • bootstrap • semantic-ui • plain
+<PhoneInput
+  country={'us'}
+  value={this.state.phone}
+  onChange={phone => this.setState({ phone })}
+/>
+```
+**available styles** - style • high-res • material • bootstrap • semantic-ui • plain
 
 ## Options
 <table>
@@ -141,7 +136,7 @@ available styles - style • high-res • material • bootstrap • semantic-ui
   </tr>
 </table>
 
-jsx
+```jsx
 <PhoneInput
   inputProps={{
     name: 'phone',
@@ -149,6 +144,7 @@ jsx
     autoFocus: true
   }}
 />
+```
 
 ### Contents
 - [Style](#style)
@@ -158,7 +154,6 @@ jsx
 - [Local area codes](#local-area-codes)
 - [Custom masks](#custom-masks)
 - [Custom area codes](#custom-area-codes)
-- [Support](https://www.paypal.me/bloomber/20)
 
 ### Style
 <table>
@@ -187,6 +182,7 @@ jsx
     <td> string </td>
     <td colspan="2"> class for search field </td>
   </tr>
+
   <tr>
     <td> containerStyle </td>
     <td> object </td>
@@ -276,7 +272,7 @@ Country data object not returns from onKeyDown event
   </tr>
 </table>
 
-jsx
+```jsx
 <PhoneInput
   country='de'
   regions={'europe'}
@@ -286,48 +282,54 @@ jsx
   country='us'
   regions={['north-america', 'carribean']}
 />
+```
 
 ### Predefined localization
-es Spanish, de Deutsch, ru Russian, fr French<br/>
-jp Japanese, cn Chinese, pt Portuguese, it Italian<br/>
-ir Iranian, ar Arabic, tr Turkish, id Indonesian<br/>
-hu Hungarian, pl Polish, ko Korean
+`es` Spanish, `de` Deutsch, `ru` Russian, `fr` French<br/>
+`jp` Japanese, `cn` Chinese, `pt` Portuguese, `it` Italian<br/>
+`ir` Iranian, `ar` Arabic, `tr` Turkish, `id` Indonesian<br/>
+`hu` Hungarian, `pl` Polish, `ko` Korean
 
-jsx
+```jsx
 import es from 'react-phone-input-with-accessibility/lang/es.json'
 
 <PhoneInput
   localization={es}
 />
+```
 
 ### Local area codes
-jsx
+```jsx
 <PhoneInput
   enableAreaCodes={true}
   enableAreaCodes={['us', 'ca']}
   enableAreaCodeStretch
 />
+```
 
 #### Flexible mask
-If enableAreaCodeStretch is added, the part of the mask with the area code will not stretch to length of the respective section of phone mask.
-Example: +61 (2), +61 (02)
+If `enableAreaCodeStretch` is added, the part of the mask with the area code will not stretch to length of the respective section of phone mask.
+Example: `+61 (2), +61 (02)`
 
 ### Custom masks
-jsx
+```jsx
 <PhoneInput
   onlyCountries={['fr', 'at']}
   masks={{fr: '(...) ..-..-..', at: '(....) ...-....'}}
 />
+```
 
 ### Custom area codes
-jsx
+```jsx
 <PhoneInput
   onlyCountries={['gr', 'fr', 'us']}
   areaCodes={{gr: ['2694', '2647'], fr: ['369', '463'], us: ['300']}}
 />
+```
 
 ### Accessibility Support
 
 This component is built with accessibility in mind and can be easily navigated using the keyboard or assistive technologies. It includes proper ARIA attributes and keyboard interaction for a seamless experience for all users.
+
 
 Make sure you donated for lib maintenance [!Donate](https://www.paypal.com/donate/?hosted_button_id=E9HMRALLDVVHQ)

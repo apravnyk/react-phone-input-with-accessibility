@@ -1,7 +1,7 @@
 {
   "name": "react-phone-input-with-accessibility",
   "version": "2.0.1",
-  "description": "A react component to format phone numbers",
+  "description": "A react component to format phone numbers with accessibility",
   "main": "lib/lib.js",
   "typings": "index.d.ts",
   "scripts": {
