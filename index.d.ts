@@ -106,6 +106,7 @@ declare module "react-phone-input-with-accessibility" {
     specialLabel?: string;
     disableInitialCountryGuess?: boolean;
     disableCountryGuess?: boolean;
+    id?: string;
   }
   const PhoneInput: React.FC<PhoneInputProps>;
   export default PhoneInput;
